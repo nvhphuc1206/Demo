@@ -80,8 +80,21 @@ print(rna.translate())
 
 # Bài 9: Finding a Motif in DNA
 from Bio.Seq import Seq
-s = Seq("ATGCGAATCGGTACG")
-t = Seq("CG")
-kq = []
-for x,y in enumerate(s):
-    if y == 
+file = open("BioPython/9_rosalind_subs.txt")
+array = file.read().split()
+print(array)
+string = array[0]
+motif = array[1]
+
+def findstr(string,substring):
+    ket_qua = []
+    vi_tri = 0
+    while True:
+        index = string.find(substring,vi_tri)
+        if index == -1:
+            break        
+        ket_qua.append(index + 1)
+        vi_tri = index + 1
+    return ket_qua
+x = findstr(string,motif)
+print(*x,sep = " ")
