@@ -20,6 +20,13 @@ print(max(fam))
 print("2","b",sep = "\n") # Cách in kết quả xuống dòng
 
 
+# Cách tạo 1 list có các phần tử là dãy số 
+x = list(range(1,11))
+print(x)
+y = list(range(0,11,2))
+print(y)
+
+
 
 # Toán tử index để lấy từng p/tử với khoảng cách nhất định:
 x = "Hoang Phuc"
@@ -49,3 +56,15 @@ print(y)
 
 import os
 print(os.getcwd())
+
+
+
+# Cách tìm 1 list có trong 1 list khác hay không:
+list_1 = [1, 2, 3, 4, 5]
+list_2 = [3, 4]
+
+if all(elem in list_1 for elem in list_2):
+    print("List 2 is contained in List 1")
+else:
+    print("List 2 is not contained in List 1")
+
